@@ -30,7 +30,7 @@ body {
 .h1 {
   text-transform: uppercase;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
   font-family: "Mulish", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
@@ -44,6 +44,10 @@ body {
   grid-column: 1/-1;
   font-size: 3rem;
   letter-spacing: 0.8rem;
+  display: inline-block;
+}
+.h1__span--2, .h1__span--3 {
+  text-shadow: rgba(0, 0, 0, 0.7) 0.3rem 1px;
 }
 .h1__span--2 {
   display: inline-block;
@@ -65,19 +69,18 @@ body {
   z-index: 500;
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  grid-column-gap: 0.2rem;
+  grid-column-gap: 1.3rem;
   align-items: center;
 }
 .circ-nav__button {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   border: none;
   border-radius: 50%;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  transform: scale(0.7);
   transition: all 0.2s;
 }
 .circ-nav__button:focus {
@@ -88,7 +91,7 @@ body {
   cursor: pointer;
 }
 .circ-nav__button--active {
-  transform: scale(1) !important;
+  transform: scale(1.5);
 }
 .circ-nav__button--active > * {
   transform: translateY(0);
@@ -99,10 +102,11 @@ body {
   width: 60%;
   height: 1px;
   transition: all 0.2s;
-  transform: translateY(0.2px);
+  position: relative;
 }
 .circ-nav__span::before, .circ-nav__span::after {
-  display: block;
+  position: absolute;
+  left: 0;
   content: "";
   width: 100%;
   height: 100%;
@@ -110,21 +114,21 @@ body {
   transition: all 0.2s;
 }
 .circ-nav__span::before {
-  transform: translateY(-1rem);
+  top: -0.6rem;
 }
 .circ-nav__span::after {
-  transform: translateY(0.8rem);
+  top: 0.6rem;
 }
 .circ-nav__span--close {
   background-color: transparent;
 }
 .circ-nav__span--close::before {
-  rotate: 135deg;
-  transform: translateY(0rem);
+  top: 0;
+  transform: rotate(135deg);
 }
 .circ-nav__span--close::after {
-  transform: translateY(0rem);
-  rotate: -135deg;
+  top: 0;
+  transform: rotate(-135deg);
 }
 .circ-nav__spin {
   display: grid;
@@ -148,7 +152,7 @@ body {
 .circ-nav__spin-link {
   display: block;
   grid-column: 1/2;
-  color: #e60033;
+  color: #fff;
   text-decoration: none;
   font-size: 1.4rem;
   text-transform: capitalize;
@@ -184,7 +188,7 @@ body {
 .header {
   grid-row: 1/2;
   grid-column: full-start/full-end;
-  background-image: linear-gradient(rgba(150, 64, 0, 0.2), rgba(150, 64, 0, 0.2)), url("../img/img-4.jpg");
+  background-image: linear-gradient(rgba(150, 64, 0, 0.3), rgba(150, 64, 0, 0.3)), url("../img/img-4.jpg");
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   padding: 3rem 4rem;
