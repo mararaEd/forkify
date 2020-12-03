@@ -1,2 +1,3 @@
 # forkify
-A typical restaurant page
+
+A typical restaurant page for our app.
