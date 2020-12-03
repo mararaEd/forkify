@@ -47,7 +47,7 @@ body {
   display: inline-block;
 }
 .h1__span--2, .h1__span--3 {
-  text-shadow: rgba(0, 0, 0, 0.7) 0.3rem 1px;
+  text-shadow: rgba(0, 0, 0, 0.3) 0.3rem 1px;
 }
 .h1__span--2 {
   display: inline-block;
