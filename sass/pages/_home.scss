@@ -1,0 +1,100 @@
+.header {
+  grid-row: 1/ 2;
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(
+      rgba($color-tertiary, 0.2),
+      rgba($color-tertiary, 0.2)
+    ),
+    url('../img/img-4.jpg');
+  background-size: cover;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 85vh,
+    0 100%
+  ); // TODO - replace clip-path with svg.
+
+  padding: 3rem 4rem;
+
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+
+  grid-template-rows: repeat(2, min-content);
+
+  grid-template-columns: minmax(min-content, 60vw);
+  grid-row-gap: 15rem;
+
+  &__nav {
+    padding: 0 3rem;
+
+    &-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 22rem repeat(5, max-content);
+      align-items: center;
+      grid-column-gap: 1rem;
+    }
+
+    // &-item {
+    // }
+
+    &-link {
+      &:link,
+      &:visited {
+        font-family: $display-font;
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.45rem;
+        transition: all 0.2s;
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+      }
+
+      &:hover {
+        background: $color-primary;
+      }
+
+      &:active {
+        border: none;
+        background: lighten($color-primary, 10%);
+      }
+    }
+  }
+
+  &__logo-box {
+    width: 15rem;
+    justify-self: left;
+  }
+
+  &__logo {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.header__nav-btn {
+  align-self: top;
+  padding: 1rem 2rem;
+  background-color: $color-primary;
+  position: relative;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+
+  & > * {
+    color: #fff;
+
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: $display-font;
+    font-weight: 400;
+    text-decoration: none;
+    z-index: 1;
+  }
+}

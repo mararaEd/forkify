@@ -1,0 +1,41 @@
+.h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  font-family: $display-font;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+
+  display: grid;
+  justify-items: center;
+
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 3rem;
+  grid-row-gap: 0.5rem;
+
+  &__span {
+    &--1 {
+      grid-column: 1 / -1;
+      font-size: 3rem;
+      letter-spacing: 0.8rem;
+    }
+
+    &--2 {
+      display: inline-block;
+      justify-self: end;
+    }
+
+    &--3 {
+      display: inline-block;
+      justify-self: start;
+    }
+
+    &--2,
+    &--3 {
+      & > * {
+        display: inline-block;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
