@@ -1,3 +1,5 @@
+'use strict';
+
 const domStrings = {
   circBtn: '.circ-nav__button',
   closeIt: '.circ-nav__span--close',
