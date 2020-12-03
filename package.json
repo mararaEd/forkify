@@ -1,0 +1,23 @@
+{
+  "name": "FoodDelivery",
+  "version": "1.0.0",
+  "description": "FoodDelivery webpage",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass sass/main.scss css/style.css --watch",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
+    "prefix:css": "npx postcss css/style.comp.css --use autoprefixer -d css",
+    "compress:css": "cleancss -o css/style.css css/style.comp.css",
+    "delete:css": "node js/script.js",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css delete:css"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "clean-css": "^4.2.3",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.2.0"
+  }
+}

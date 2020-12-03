@@ -1,0 +1,149 @@
+.circ-nav {
+  position: absolute;
+  top: 2.1rem;
+  left: 7rem;
+  z-index: 500;
+
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 0.2rem;
+  align-items: center;
+
+  &__button {
+    width: 6rem;
+    height: 6rem;
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+    transform: scale(0.7);
+    transition: all 0.2s;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--active {
+      transform: scale(1) !important;
+
+      & > * {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__span {
+    display: block;
+    background-color: $color-tertiary;
+    width: 60%;
+    height: 1px;
+    transition: all 0.2s;
+    transform: translateY(0.2px);
+
+    &::before,
+    &::after {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: $color-tertiary;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      transform: translateY(-1rem);
+    }
+
+    &::after {
+      transform: translateY(0.8rem);
+    }
+
+    &--close {
+      background-color: transparent;
+
+      &::before {
+        rotate: 135deg;
+        transform: translateY(0rem);
+      }
+
+      &::after {
+        transform: translateY(0rem);
+        rotate: -135deg;
+      }
+    }
+  }
+
+  &__spin {
+    display: grid;
+    grid-template-columns: minmax(6.5rem, max-content);
+    align-items: center;
+    justify-items: center;
+
+    width: 16rem;
+    height: 8rem;
+    clip-path: ellipse(0% 0% at 0% 100%);
+
+    padding: 1.3rem 0;
+
+    padding-bottom: 1.5rem;
+    color: #fff;
+
+    transition: all 0.2s;
+
+    &-icon {
+      width: 100%;
+      height: 100%;
+      fill: $color-tertiary;
+      transform: rotate(90deg);
+    }
+
+    &-link {
+      display: block;
+      grid-column: 1 / 2;
+      color: $color-secondary;
+      text-decoration: none;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      z-index: 500;
+      position: relative;
+      text-align: right;
+      transition: all 0.3s;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-4rem) translateY(10%);
+
+      &--3 {
+        margin-left: 0.5rem;
+      }
+
+      &--2 {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -0.2rem;
+        justify-self: start;
+      }
+    }
+
+    &--active {
+      clip-path: ellipse(56% 51.5% at 5% 51%);
+
+      & > * {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+      }
+    }
+  }
+}

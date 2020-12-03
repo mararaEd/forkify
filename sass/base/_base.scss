@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 300;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns:
+    [full-start s1-start] minmax(7rem, max-content) [s1-end] 1fr repeat(
+      8,
+      [col-start] minmax(14.2rem, 1fr) [col-end]
+    )
+    1fr [s2-start] minmax(7rem, max-content) [full-end s2-end];
+
+  &--back {
+    grid-template-rows: 13vh 77vh 10vh;
+    background-image: linear-gradient(
+      to right bottom,
+      $color-primary-lighter,
+      $color-primary-lightest
+    );
+    overflow: hidden;
+  }
+}
