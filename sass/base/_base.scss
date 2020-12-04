@@ -20,19 +20,21 @@ body {
   display: grid;
   grid-template-rows: 100vh;
   grid-template-columns:
-    [full-start s1-start] minmax(7rem, max-content) [s1-end] 1fr repeat(
+    [full-start s1-start] minmax(min-content, 12rem) [s1-end] 1fr repeat(
       8,
-      [col-start] minmax(14.2rem, 1fr) [col-end]
+      [col-start] minmax(min-content, 14.2rem) [col-end]
     )
-    1fr [s2-start] minmax(7rem, max-content) [full-end s2-end];
+    1fr [s2-start] minmax(min-content, 12rem) [full-end s2-end];
 
   &--back {
-    grid-template-rows: 13vh 77vh 10vh;
+    grid-template-rows: 10vh 83vh 10vh;
     background-image: linear-gradient(
       to right bottom,
       $color-primary-lighter,
       $color-primary-lightest
     );
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow: hidden;
   }
 }
