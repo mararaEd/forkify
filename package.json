@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "sass sass/main.scss css/style.css --watch",
+    "live": "live-server",
     "compile:sass": "sass sass/main.scss css/style.comp.css",
     "prefix:css": "npx postcss css/style.comp.css --use autoprefixer -d css",
     "compress:css": "cleancss -o css/style.css css/style.comp.css",
