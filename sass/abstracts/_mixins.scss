@@ -1,0 +1,39 @@
+@mixin takePlace1 {
+  background-color: none;
+  padding: 0.2rem 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+}
+
+@mixin takePlace2 {
+  background-color: darken($color-grey-light-2, 4%);
+  padding: 0.2rem 1rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+@mixin takePlaceM($type) {
+  @if ($type == 'first') {
+    @keyframes takePlace {
+      from {
+        @include takePlace1;
+      }
+
+      to {
+        @include takePlace2;
+      }
+    }
+  } @else {
+    @keyframes takePlaceR {
+      from {
+        @include takePlace2;
+      }
+
+      to {
+        @include takePlace1;
+      }
+    }
+  }
+}

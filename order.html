@@ -306,6 +306,90 @@
           </div>
         </div>
       </secton>
+
+      <section class="order">
+        <h2 class="h2 order__heading">My orders</h2>
+
+        <div class="order__form">
+          <form class="form">
+            <div class="form__group">
+              <div class="radio__group">
+                <label
+                  for="unique_add"
+                  class="form__label form__label--grey form__label--order"
+                >
+                  <p class="margin-bottom">Delivery address</p>
+
+                  <div class="form__cur-list">
+                    <p class="form__cur-list_text">1341 Morris street</p>
+                    <svg class="form__cur-list_icon">
+                      <use
+                        xlink:href="img/sprite.svg#icon-chevron-small-down"
+                      ></use>
+                    </svg>
+                  </div>
+
+                  <div class="form__list">
+                    <p class="form__list-p">lorem ipsum dolor sit amet</p>
+                    <p class="form__list-p">Proin vitae ante</p>
+                    <p class="form__list-p">porta enim in</p>
+                    <p class="form__list-p">lorem ipsum dolor sit amet</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="order__details">
+          <svg class="order__details-icon">
+            <use xlink:href="img/sprite.svg#icon-stopwatch"></use>
+          </svg>
+          <p class="order__details-text order__details-text--1">43 mins</p>
+          <svg class="order__details-icon">
+            <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+          </svg>
+          <p class="order__details-text">4kms</p>
+        </div>
+
+        <div class="order__container-items">
+          <div class="item">
+            <img src="img/card-1.jpg" alt="item 1" class="item__img" />
+            <h3 class="item__name">Burger mozzo xl Extra cheese</h3>
+            <span class="item__close">
+              <svg class="item__icon">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </span>
+
+            <div class="quantifier quantifier--order">
+              <span class="quantifier__content">1</span>
+              <span class="quantifier__icon-box">
+                <svg class="quantifier__icon">
+                  <use
+                    xlink:href="img/sprite.svg#icon-chevron-small-down"
+                  ></use>
+                </svg>
+              </span>
+            </div>
+
+            <span class="item__price">$39</span>
+          </div>
+        </div>
+
+        <!--
+        <div class="order__stats">
+          <p class="order__stats-label">Delivery fee</p>
+          <p class="order__stats-label">Sub total</p>
+          <p class="order__stats-label">Total</p>
+
+          <p class="order__stats-value">$5</p>
+          <p class="order__stats-value">$100</p>
+          <p class="order__stats-value">$105</p>
+        </div>
+
+        <button class="order__button">Checkout</button> -->
+      </section>
     </main>
 
     <script src="js/index.js"></script>
