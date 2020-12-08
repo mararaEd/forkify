@@ -1,0 +1,80 @@
+.cta {
+  display: grid;
+  // grid-template-rows: auto  minmax(min-content, 4rem);
+  grid-template-rows: auto 5.5rem 1fr 1fr;
+  align-self: end;
+  row-gap: 1rem;
+
+  &__stat {
+    border-top: 1px solid darken($color-grey-light-2, 7%);
+    padding: 1rem 0.8rem 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 0.5rem;
+
+    &-label {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: $color-grey-dark-1;
+      text-transform: capitalize;
+    }
+
+    &-value {
+      justify-self: end;
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 0.05rem;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    &--end {
+      align-self: end;
+    }
+  }
+
+  &__promo {
+    border: 2px solid $color-primary-lightest;
+    border-radius: 5px;
+    background-color: lighten($color-primary-lightest, 10%);
+    align-self: end;
+
+    // quick fix
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 0.7rem 0.8rem;
+
+    &-p {
+      text-transform: capitalize;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    &-btn {
+      padding-right: 1rem;
+
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      align-items: center;
+      justify-items: center;
+      column-gap: 1.3rem;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 0.8rem;
+        height: 1.2rem;
+        background-color: #fff;
+        mask-image: url('../img/');
+        -webkit-mask-image: url('../img/bitcoin.svg');
+        -webkit-mask-size: cover;
+        mask-size: cover;
+      }
+    }
+  }
+}

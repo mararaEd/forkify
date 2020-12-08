@@ -17,6 +17,13 @@ const domStrings = {
   listCurT: '.form__cur-list_text',
   listCurRe: 'form__cur-list--reverse',
   listShow: 'form__list--show',
+  item: '.item',
+  quant_cont: '.item__container-quant',
+
+  formFi: 'form--in',
+  formFo: 'form--out',
+  quantFi: 'quantifier--in',
+  quantFo: 'quantifier--out',
 };
 
 // ELEMENTS
@@ -26,6 +33,57 @@ const listCurText = document.querySelector(domStrings.listCurT);
 const list = document.querySelector(domStrings.list);
 const listPara = document.querySelector(domStrings.listP);
 const order = document.querySelector(domStrings.order);
+
+const items = Array.from(document.querySelectorAll(domStrings.item));
+const containerQ = document.querySelector(domStrings.quant_cont);
+const customQ = document.querySelector('.quantifier');
+const formQ = document.querySelector('.form--quant');
+
+const clear = (...arg) => {
+  arg.forEach((el, i) => {
+    el.classList.remove(...Array.prototype.slice.call(el.classList, i + 1));
+  });
+};
+
+const determineQuants = e => {
+  const elm = e.target.children[3];
+
+  return [elm.firstElementChild, elm.lastElementChild];
+};
+
+if (items?.[0]) {
+  items.forEach(item => {
+    item.addEventListener('mouseenter', function (e) {
+      const [customQ, formQ] = determineQuants(e);
+
+      const value = customQ.firstElementChild.textContent;
+
+      clear(customQ, formQ);
+
+      customQ.parentElement.style.transition = 'all 0.1s';
+
+      customQ.classList.add(domStrings.quantFo);
+
+      formQ.firstElementChild.firstElementChild.value = value;
+      formQ.classList.add(domStrings.formFi);
+    });
+
+    item.addEventListener('mouseleave', function (e) {
+      const [customQ, formQ] = determineQuants(e);
+
+      const value = formQ.firstElementChild.firstElementChild.value;
+
+      clear(customQ, formQ);
+
+      customQ.parentElement.style.transition = 'all 0.1s 0.1s';
+
+      customQ.firstElementChild.textContent = value;
+
+      customQ.classList.add(domStrings.quantFi);
+      formQ.classList.add(domStrings.formFo);
+    });
+  });
+}
 
 // EVENTS
 
@@ -49,8 +107,10 @@ if (order) {
       list.classList.remove(domStrings.listShow);
       listCurText.textContent = e.target.textContent;
     } else {
-      listCur.classList.add(domStrings.listCurRe);
-      list.classList.remove(domStrings.listShow);
+      if (listCur.matches(`.${domStrings.listCurChange}`)) {
+        listCur.classList.add(domStrings.listCurRe);
+        list.classList.remove(domStrings.listShow);
+      }
     }
   });
 }

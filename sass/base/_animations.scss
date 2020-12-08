@@ -16,5 +16,29 @@
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    z-index: 13;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  to {
+    opacity: 1;
+    z-index: 13;
+  }
+}
+
 @include takePlaceM(first);
 @include takePlaceM(se);

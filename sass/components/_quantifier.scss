@@ -8,10 +8,16 @@
   border-radius: 5px;
   border: 1px solid darken($color-grey-light-1, 8%);
 
-  &--order {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-    transform: translateX(2.6rem);
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  z-index: 13;
+
+  &--out {
+    animation: fadeOut 0.2s forwards;
+  }
+
+  &--in {
+    animation: fadeIn 0.2s forwards;
   }
 
   &__content {
