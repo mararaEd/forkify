@@ -47,13 +47,15 @@
   background-color: #fff;
   grid-column: col-start 1 / col-end 8;
   grid-row: 1 / -1;
+  justify-self: center;
+  width: 86%;
   border: $color-primary solid 5px;
   border-radius: 22px;
   margin-bottom: 1rem;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
 
-  margin: 3rem 8rem 5rem 8rem;
+  margin: 3rem 0rem 5rem 0rem;
 
   display: grid;
   grid-template-columns: max-content max-content 1fr;
@@ -265,8 +267,9 @@
   background-color: $color-grey-light-1;
 
   padding: 3rem 1.9rem;
+  padding-bottom: 1.8rem;
   display: grid;
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(3, min-content) 1fr;
 
   &__heading {
     padding-bottom: 2rem;
@@ -300,6 +303,13 @@
   }
 
   &__container-items {
-    // background-color: orangered;
+    align-self: start;
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, min-content);
+    row-gap: 1.5rem;
+    // overflow-y: scroll;
+    // overflow: hidden;
+    // max-height: 23rem;
   }
 }

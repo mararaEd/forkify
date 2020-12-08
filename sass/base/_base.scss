@@ -20,11 +20,11 @@ body {
   display: grid;
   grid-template-rows: 100vh;
   grid-template-columns:
-    [full-start s1-start] minmax(min-content, 12rem) [s1-end] 1fr repeat(
+    [full-start s1-start] minmax(6rem, 12rem) [s1-end] 1fr repeat(
       8,
       [col-start] minmax(min-content, 14.2rem) [col-end]
     )
-    1fr [s2-start] minmax(min-content, 12rem) [full-end s2-end];
+    1fr [s2-start] minmax(6rem, 12rem) [full-end s2-end];
 
   &--back {
     grid-template-rows: 10vh 83vh 10vh;
