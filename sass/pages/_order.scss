@@ -44,30 +44,48 @@
 }
 
 .main {
+  // background-color: #fff;
+  // grid-column: col-start 1 / col-end 8;
+  // grid-row: 1 / -1;
+  // justify-self: center;
+  // width: 86%;
+  // border: $color-primary solid 5px;
+  // border-radius: 22px;
+  // margin-bottom: 1rem;
+  // box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  // overflow: hidden;
+
+  // margin: 3rem 0rem 5rem 0rem;
+
+  // display: grid;
+  // grid-template-columns: max-content max-content 1fr;
+
+  // full-screen-mode
+
   background-color: #fff;
-  grid-column: col-start 1 / col-end 8;
+  grid-column: full-start / full-end;
   grid-row: 1 / -1;
-  justify-self: center;
-  width: 86%;
-  border: $color-primary solid 5px;
-  border-radius: 22px;
-  margin-bottom: 1rem;
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
 
-  margin: 3rem 0rem 5rem 0rem;
-
   display: grid;
-  grid-template-columns: max-content max-content 1fr;
+  grid-template-columns: max-content 2fr 1fr;
 }
 
 // TODO ov
 .overview {
   padding: 1rem 2rem;
+  padding-bottom: 3rem;
 
   display: grid;
   grid-row-gap: 1.8rem;
-  grid-template-rows: min-content 16rem min-content min-content;
+  // grid-template-rows: min-content 16rem min-content min-content;
+
+  // full-screen
+  grid-template-rows: min-content 1fr min-content 48vh;
+
+  @include media(lg) {
+    grid-template-rows: min-content 1fr min-content 52vh;
+  }
 }
 
 .img-view {
@@ -86,7 +104,6 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-
   overflow: hidden;
   border-radius: 3px;
   clip-path: polygon(
@@ -162,6 +179,7 @@
         color: #fff;
         letter-spacing: 0.1rem;
         margin-left: 0.3rem;
+        padding: 0.4rem 0;
       }
     }
   }
@@ -169,7 +187,11 @@
   &__dec {
     width: 10%;
     height: 15%;
-    transform: translate(2rem, 1.8rem);
+    // transform: translate(3rem, 1.8rem);
+
+    // full-screen
+    transform: translate(2vw, 2.3rem);
+
     justify-self: center;
     align-self: end;
     grid-column: 1 / 2;
@@ -259,15 +281,22 @@
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-column-gap: 2.5rem;
   grid-row-gap: 1.5rem;
-  max-height: 28rem;
   overflow-y: scroll;
 }
 
 .order {
+  // background-color: $color-grey-light-1;
+
+  // padding: 3rem 1.9rem;
+  // padding-bottom: 1.8rem;
+  // display: grid;
+  // grid-template-rows: repeat(3, min-content) 1fr;
+
+  // full-screen-mode
   background-color: $color-grey-light-1;
 
-  padding: 3rem 1.9rem;
-  padding-bottom: 1.8rem;
+  padding: 3rem 4vw;
+  padding-bottom: 4rem;
   display: grid;
   grid-template-rows: repeat(3, min-content) 1fr;
 

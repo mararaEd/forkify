@@ -37,3 +37,11 @@
     }
   }
 }
+
+@mixin media($bp) {
+  @if ($bp == 'lg') {
+    @media only screen and (max-width: $bp-largest) {
+      @content;
+    }
+  }
+}
