@@ -121,9 +121,17 @@
       z-index: 12;
       position: relative;
 
+      @include media(lg) {
+        background-color: darken($color-grey-light-2, 0.5%);
+      }
+
       &:focus {
         outline: none;
         background-color: darken($color-grey-light-2, 1%);
+
+        @include media(lg) {
+          background-color: darken($color-grey-light-2, 0.3%);
+        }
       }
     }
   }

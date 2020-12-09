@@ -70,11 +70,25 @@
         width: 0.8rem;
         height: 1.2rem;
         background-color: #fff;
-        mask-image: url('../img/');
+        mask-image: url('../img/bitcoin.svg');
         -webkit-mask-image: url('../img/bitcoin.svg');
         -webkit-mask-size: cover;
         mask-size: cover;
       }
     }
+  }
+}
+
+@mixin beBtn {
+  &::before {
+    content: '';
+    display: block;
+    width: 0.8rem;
+    height: 1.2rem;
+    background-color: #fff;
+    mask-image: url('../img/bitcoin.svg');
+    -webkit-mask-image: url('../img/bitcoin.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
   }
 }

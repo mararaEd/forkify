@@ -10,7 +10,6 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -312,15 +311,74 @@ body {
 .card {
   display: grid;
   grid-template-columns: minmax(min-content, 16rem) min-content;
-  grid-row-gap: 0.3rem;
+  row-gap: 0.3rem;
+}
+@media only screen and (max-width: 75em) {
+  .card {
+    grid-template-rows: auto 2.3rem;
+    row-gap: 0.55rem;
+    grid-template-columns: 1fr min-content;
+    padding: 0 1vw;
+    border-bottom-right-radius: 10px;
+  }
 }
 .card__fig {
   position: relative;
-  height: 12rem;
+  height: 14rem;
   grid-column: 1/-1;
   grid-row: 1/2;
   display: grid;
   overflow: hidden;
+}
+@media only screen and (max-width: 75em) {
+  .card__fig {
+    height: 16rem;
+  }
+}
+.card__img {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  z-index: 10;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 75em) {
+  .card__img {
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 9px;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .card__button {
+    background-color: #f6ad49;
+    padding: 0.8rem 1rem;
+    grid-column: 2/3;
+    grid-row: 4/5;
+    justify-self: start;
+    border-top-left-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card__button::after {
+    content: "";
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    mask-image: url("../img/compass.svg");
+    -webkit-mask-image: url("../img/compass.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: #fff;
+  }
 }
 .card__fig:hover .card__caption {
   opacity: 1;
@@ -368,20 +426,16 @@ body {
   -webkit-background-clip: text;
   color: transparent;
 }
-.card__img {
-  grid-row: 1/2;
-  grid-column: 1/2;
-  height: 100%;
-  width: 100%;
-  border-radius: 4px;
-  object-fit: cover;
-  z-index: 10;
-  transition: all 0.3s;
-}
 .card__desc {
   text-transform: capitalize;
   color: #999;
   font-size: 1.1rem;
+}
+@media only screen and (max-width: 75em) {
+  .card__desc {
+    grid-column: 1/-1;
+    justify-self: start;
+  }
 }
 .card__icon-box {
   position: absolute;
@@ -409,10 +463,43 @@ body {
   font-size: 1.2rem;
   color: #853900;
 }
+@media only screen and (max-width: 75em) {
+  .card__name, .card__price {
+    align-self: end;
+    color: #1a1a1a;
+    font-weight: 500;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .card__name {
+    font-size: 1.3rem;
+  }
+}
 .card__price {
   grid-column: 2/3;
   justify-self: end;
   color: #d5002f;
+  display: flex;
+}
+@media only screen and (max-width: 75em) {
+  .card__price {
+    color: inherit;
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    justify-self: start;
+    align-self: start;
+    transform: translateY(0.2rem);
+    display: flex;
+    align-items: flex-start;
+  }
+  .card__price-currency {
+    font-size: 0.9rem;
+    margin-right: 0.14rem;
+  }
+  .card__price-number {
+    font-size: 1.4rem;
+    letter-spacing: 0.04rem;
+  }
 }
 
 .form--quant {
@@ -515,9 +602,19 @@ body {
   z-index: 12;
   position: relative;
 }
+@media only screen and (max-width: 75em) {
+  .form__input--num {
+    background-color: #ededed;
+  }
+}
 .form__input--num:focus {
   outline: none;
   background-color: #ebebeb;
+}
+@media only screen and (max-width: 75em) {
+  .form__input--num:focus {
+    background-color: #ededed;
+  }
 }
 
 .item {
@@ -543,6 +640,7 @@ body {
   height: 6.1rem;
   object-fit: cover;
   border-radius: 6px;
+  height: 6.9rem;
 }
 .item__close {
   grid-row: 2/3;
@@ -599,6 +697,11 @@ body {
   grid-row: 1/2;
   grid-column: 1/2;
   z-index: 13;
+}
+@media only screen and (max-width: 75em) {
+  .quantifier {
+    display: none;
+  }
 }
 .quantifier--out {
   animation: fadeOut 0.2s forwards;
@@ -682,7 +785,7 @@ body {
   width: 0.8rem;
   height: 1.2rem;
   background-color: #fff;
-  mask-image: url("../img/");
+  mask-image: url("../img/bitcoin.svg");
   -webkit-mask-image: url("../img/bitcoin.svg");
   -webkit-mask-size: cover;
   mask-size: cover;
@@ -898,25 +1001,24 @@ body {
 
 .main {
   background-color: #fff;
-  grid-column: col-start 1/col-end 8;
+  grid-column: full-start/full-end;
   grid-row: 1/-1;
-  justify-self: center;
-  width: 86%;
-  border: #f6ad49 solid 5px;
-  border-radius: 22px;
-  margin-bottom: 1rem;
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  margin: 3rem 0rem 5rem 0rem;
   display: grid;
-  grid-template-columns: max-content max-content 1fr;
+  grid-template-columns: max-content 2fr 1fr;
 }
 
 .overview {
   padding: 1rem 2rem;
+  padding-bottom: 3rem;
   display: grid;
   grid-row-gap: 1.8rem;
-  grid-template-rows: min-content 16rem min-content min-content;
+  grid-template-rows: min-content 1fr min-content 48vh;
+}
+@media only screen and (max-width: 75em) {
+  .overview {
+    grid-template-rows: min-content 1fr min-content 52vh;
+  }
 }
 
 .img-view {
@@ -986,11 +1088,12 @@ body {
   color: #fff;
   letter-spacing: 0.1rem;
   margin-left: 0.3rem;
+  padding: 0.4rem 0;
 }
 .img-view__dec {
   width: 10%;
   height: 15%;
-  transform: translate(2rem, 1.8rem);
+  transform: translate(2vw, 2.3rem);
   justify-self: center;
   align-self: end;
   grid-column: 1/2;
@@ -1059,14 +1162,13 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-column-gap: 2.5rem;
   grid-row-gap: 1.5rem;
-  max-height: 28rem;
   overflow-y: scroll;
 }
 
 .order {
   background-color: #f7f7f7;
-  padding: 3rem 1.9rem;
-  padding-bottom: 1.8rem;
+  padding: 3rem 4vw;
+  padding-bottom: 4rem;
   display: grid;
   grid-template-rows: repeat(3, min-content) 1fr;
 }

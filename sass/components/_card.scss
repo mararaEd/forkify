@@ -2,15 +2,76 @@
   display: grid;
 
   grid-template-columns: minmax(min-content, 16rem) min-content;
-  grid-row-gap: 0.3rem;
+  row-gap: 0.3rem;
+
+  @include media(lg) {
+    grid-template-rows: auto 2.3rem;
+    row-gap: 0.55rem;
+    grid-template-columns: 1fr min-content;
+    padding: 0 1vw;
+    border-bottom-right-radius: 10px;
+  }
 
   &__fig {
     position: relative;
-    height: 12rem;
+    height: 14rem;
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     display: grid;
     overflow: hidden;
+
+    @include media(lg) {
+      height: 16rem;
+    }
+  }
+
+  &__img {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    z-index: 10;
+    transition: all 0.3s;
+
+    @include media(lg) {
+      border-radius: 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 9px;
+    }
+  }
+
+  &__button {
+    @include media(lg) {
+      background-color: $color-primary;
+      padding: 0.8rem 1rem;
+      grid-column: 2 / 3;
+      grid-row: 4/ 5;
+      justify-self: start;
+      border-top-left-radius: 10px;
+      margin-top: 1rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      border-bottom-right-radius: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        mask-image: url('../img/compass.svg');
+        -webkit-mask-image: url('../img/compass.svg');
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: #fff;
+      }
+    }
   }
 
   &__fig:hover &__caption {
@@ -80,22 +141,15 @@
     }
   }
 
-  &__img {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-
-    height: 100%;
-    width: 100%;
-    border-radius: 4px;
-    object-fit: cover;
-    z-index: 10;
-    transition: all 0.3s;
-  }
-
   &__desc {
     text-transform: capitalize;
     color: $color-grey-dark-2;
     font-size: 1.1rem;
+
+    @include media(lg) {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
   }
 
   &__icon-box {
@@ -127,11 +181,46 @@
     font-weight: 400;
     font-size: 1.2rem;
     color: $color-tertiary-dark;
+
+    @include media(lg) {
+      align-self: end;
+      color: lighten(#000000, 10%);
+      font-weight: 500;
+    }
+  }
+
+  &__name {
+    @include media(lg) {
+      font-size: 1.3rem;
+    }
   }
 
   &__price {
     grid-column: 2 / 3;
     justify-self: end;
     color: $color-secondary-dark;
+    display: flex;
+
+    @include media(lg) {
+      color: inherit;
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+      justify-self: start;
+      align-self: start;
+
+      transform: translateY(0.2rem);
+      display: flex;
+      align-items: flex-start;
+
+      &-currency {
+        font-size: 0.9rem;
+        margin-right: 0.14rem;
+      }
+
+      &-number {
+        font-size: 1.4rem;
+        letter-spacing: 0.04rem;
+      }
+    }
   }
 }
