@@ -24,6 +24,11 @@ const domStrings = {
   formFo: 'form--out',
   quantFi: 'quantifier--in',
   quantFo: 'quantifier--out',
+
+  fItem: '.search-pref__item',
+  fActive: 'search-pref__item--active',
+  fActiveF: 'search-pref__item--activeF',
+  fShow: 'search-pref--show',
 };
 
 // ELEMENTS
@@ -38,6 +43,16 @@ const items = Array.from(document.querySelectorAll(domStrings.item));
 const containerQ = document.querySelector(domStrings.quant_cont);
 const customQ = document.querySelector('.quantifier');
 const formQ = document.querySelector('.form--quant');
+
+const contFilter = document.querySelector('.search-pref');
+const filterItem = document.querySelector(domStrings.fItem);
+const filterBtn = document.querySelector('.user-nav__icon');
+
+if (filterBtn) {
+  filterBtn.addEventListener('click', () => {
+    contFilter.classList.toggle(domStrings.fShow);
+  });
+}
 
 const clear = (...arg) => {
   arg.forEach((el, i) => {
@@ -139,3 +154,37 @@ if (circBtn)
       domStrings.activeSpin.split('.')[1]
     );
   });
+
+if (filterItem) {
+  const allItems = Array.from(document.querySelectorAll('.search-pref__item'));
+
+  // listening for the click event.
+  document.querySelector('.search-pref').addEventListener('click', e => {
+    if (e.target.matches('svg, use, .search-pref__link')) {
+      // current item
+      const elm = e.target.closest(domStrings.fItem);
+
+      // removing active class from all the items.
+      allItems.forEach(el => {
+        el.classList.remove(
+          domStrings.fActive,
+          el.classList.contains(domStrings.fActive)
+        );
+      });
+
+      // toggling between both the active and forceActive classes.
+      elm.classList.toggle(domStrings.fActive);
+      elm.classList.toggle(
+        domStrings.fActiveF,
+        elm.classList.contains(domStrings.fActive)
+      );
+    }
+  });
+
+  // removing the active class when the mouse isn't over the items.
+  allItems.forEach(el => {
+    el.addEventListener('mouseleave', e => {
+      e.target.classList.remove(domStrings.fActiveF);
+    });
+  });
+}

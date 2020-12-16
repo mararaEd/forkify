@@ -1,0 +1,184 @@
+%typo {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #c25987;
+  font-size: 1.3rem;
+}
+
+.user-nav {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr 0.1fr repeat(3, max-content);
+  align-items: center;
+  justify-items: center;
+
+  column-gap: 1.5rem;
+
+  &__icon-box {
+    &:nth-child(2) {
+      grid-column: 3 / 4;
+      justify-self: start;
+    }
+
+    &:nth-child(4) {
+      svg {
+        flex: 0 0 2.3rem;
+        height: 2.3rem;
+      }
+    }
+
+    &--not {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        flex: 0 0 2.2rem;
+        height: 1.8rem;
+      }
+    }
+  }
+
+  &__ind {
+    flex: 0 0 1.3rem;
+    height: 1.3rem;
+    background-color: $color-secondary;
+    color: #fff;
+    padding: 0.2rem 0.2rem;
+    border-radius: 50%;
+    transform: translate(-1rem, -0.5rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__user {
+    padding: 0.7rem;
+    padding-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: lighten(#ecb1ca, 6%);
+    }
+
+    &:hover &-list {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+
+    &-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      background-color: lighten(#ecb1ca, 6%);
+      list-style: none;
+      clip-path: inset(0 0 100% 0);
+      opacity: 0;
+      transition: all 0.2s;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &-link {
+      @extend %typo;
+      position: relative;
+      text-decoration: none;
+      padding: 0.3rem 0.8rem;
+      overflow: hidden;
+      transition: all 0.2s, padding-left 0.1s 0.13s ease-out;
+      justify-content: center;
+
+      &--2 {
+        transition: all 0.2s, padding-left 0.1s 0.13s ease-in;
+      }
+
+      &:hover {
+        color: #fff;
+        background-color: #dc045f;
+        padding-left: 2.2rem;
+      }
+
+      &--2:hover {
+        padding-left: 2.3rem;
+      }
+
+      &:hover::before {
+        top: 50%;
+        opacity: 1;
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      &--2:hover::before {
+        transform: translateY(-54%) rotate(0);
+      }
+
+      &--1::before,
+      &--2::before {
+        top: -0.5rem;
+        position: absolute;
+        display: block;
+        content: '';
+        width: 1.3rem;
+        height: 1.3rem;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: #fff;
+        opacity: 0;
+      }
+
+      &--1::before {
+        left: 1rem;
+        mask-image: url(../img/cog.svg);
+        -webkit-mask-image: url(../img/cog.svg);
+        transition: all 0.2s;
+        transform: translateY(-50%);
+      }
+
+      &--2::before {
+        left: 1.3rem;
+        mask-image: url(../img/log-out.svg);
+        -webkit-mask-image: url(../img/log-out.svg);
+        transition: all 0.2s, transform 0.1s 0.13s ease-in;
+        transform: translateY(-50%) rotate(-90deg);
+      }
+    }
+
+    &-name {
+      @extend %typo;
+      margin-left: 0.8rem;
+
+      svg {
+        width: 1.3rem;
+        height: 1.3rem;
+        fill: currentColor;
+      }
+    }
+
+    &-img {
+      flex: 1;
+      height: 3.4rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    color: #c25987;
+    fill: currentColor;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      fill: darken(#c25987, 10%);
+    }
+  }
+}
