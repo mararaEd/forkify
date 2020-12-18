@@ -11,6 +11,7 @@
   grid-template-columns: 3fr 1.5fr 0.1fr repeat(3, max-content);
   align-items: center;
   justify-items: center;
+  z-index: 600;
 
   column-gap: 1.5rem;
 
@@ -82,6 +83,7 @@
       opacity: 0;
       transition: all 0.2s;
 
+      z-index: 50;
       display: flex;
       flex-direction: column;
       justify-content: center;

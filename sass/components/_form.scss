@@ -10,6 +10,16 @@
     &--out {
       animation: fadeOut 0.1s forwards;
     }
+
+    input {
+      background-color: lighten(#bbb096, 7.5%);
+      color: #736649;
+      transition: all 0.2s;
+
+      &:focus {
+        background-color: lighten(#bbb096, 10%);
+      }
+    }
   }
 
   &__label {
@@ -31,6 +41,7 @@
     justify-content: space-between;
     align-items: center;
     min-width: 21rem;
+    color: rgba(#000000, 0.85);
 
     &--change {
       &_text {
@@ -38,6 +49,14 @@
       }
 
       animation: takePlace 0.3s forwards;
+    }
+
+    &--vColor {
+      color: #c25987;
+
+      svg {
+        fill: #dd86ac;
+      }
     }
 
     &--reverse {
@@ -49,27 +68,28 @@
     }
 
     &_text {
-      color: rgba(#000000, 0.85);
+      color: currentColor;
       font-family: $display-font;
       font-weight: 500;
       font-size: 1.4rem;
-      transition: all 0.3s;
+      transition: all 0.2s;
     }
 
     &_icon {
       width: 2rem;
       height: 2rem;
       fill: lighten($color-grey-dark-3, 12%);
+      transition: all 0.2s;
     }
   }
 
   &__list {
     position: absolute;
     min-width: 21rem;
-    background-color: $color-grey-light-2;
+
+    background-image: linear-gradient(to top left, #fadff2, #fff0ed);
     font-size: 1.35rem;
-    // margin-top: -0.2rem;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
 
     display: flex;
     flex-direction: column;
@@ -101,7 +121,7 @@
       align-self: flex-start;
 
       &:hover {
-        background-color: $color-grey-light-1;
+        background-color: #ffe5c0;
         cursor: pointer;
       }
     }

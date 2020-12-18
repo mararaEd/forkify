@@ -1,7 +1,6 @@
 .cta {
   display: grid;
-  // grid-template-rows: auto  minmax(min-content, 4rem);
-  grid-template-rows: auto 5.5rem 1fr 1fr;
+  grid-template-rows: auto 5.5rem repeat(2, 1fr);
   align-self: end;
   row-gap: 1rem;
 
@@ -35,9 +34,13 @@
   }
 
   &__promo {
-    border: 2px solid $color-primary-lightest;
+    border: 2px solid lighten(#ea9ed3, 10%);
     border-radius: 5px;
-    background-color: lighten($color-primary-lightest, 10%);
+    background-image: linear-gradient(
+      to right bottom,
+      #fadff2,
+      lighten(#ea9ed3, 17%)
+    );
     align-self: end;
 
     // quick fix
@@ -52,7 +55,7 @@
       text-transform: capitalize;
       font-size: 1.15rem;
       font-weight: 400;
-      color: rgba(0, 0, 0, 0.7);
+      color: #c25987;
     }
 
     &-btn {
@@ -69,7 +72,7 @@
         display: block;
         width: 0.8rem;
         height: 1.2rem;
-        background-color: #fff;
+        background-color: currentColor;
         mask-image: url('../img/bitcoin.svg');
         -webkit-mask-image: url('../img/bitcoin.svg');
         -webkit-mask-size: cover;

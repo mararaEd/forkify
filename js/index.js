@@ -13,7 +13,10 @@ const domStrings = {
   listP: '.form__list-p',
 
   order: '.order',
+  closeOrder: '.order__close',
+  showOrder: 'order--show',
   listCurChange: 'form__cur-list--change',
+  listCurTypo: 'form__cur-list--vColor',
   listCurT: '.form__cur-list_text',
   listCurRe: 'form__cur-list--reverse',
   listShow: 'form__list--show',
@@ -44,15 +47,53 @@ const containerQ = document.querySelector(domStrings.quant_cont);
 const customQ = document.querySelector('.quantifier');
 const formQ = document.querySelector('.form--quant');
 
+const closeOrder = document.querySelector(domStrings.closeOrder);
 const contFilter = document.querySelector('.search-pref');
 const filterItem = document.querySelector(domStrings.fItem);
-const filterBtn = document.querySelector('.user-nav__icon');
+const h2 = document.querySelector('.h2--pref');
+const containerCard = document.querySelector('.containerCards');
+const cardIcons = [...document.querySelectorAll('.card__icon')];
+const [filterBtn, , orderBtn] = [
+  ...document.querySelectorAll('.user-nav__icon'),
+];
 
-if (filterBtn) {
-  filterBtn.addEventListener('click', () => {
-    contFilter.classList.toggle(domStrings.fShow);
+if (orderBtn)
+  document.addEventListener('click', e => {
+    const { order: type } = e.target.dataset;
+
+    if (e.target === orderBtn || type?.startsWith('f'))
+      return order.classList.add(domStrings.showOrder);
+
+    if (
+      e.target.matches(`${domStrings.closeOrder}, .order__icon`) ||
+      type?.startsWith('t')
+    )
+      return order.classList.remove(domStrings.showOrder);
+
+    if (!e.target.closest(domStrings.order))
+      order.classList.remove(domStrings.showOrder);
+  });
+
+if (cardIcons) {
+  cardIcons.forEach(el => {
+    el.addEventListener('mouseleave', e => {
+      e.target.lastElementChild.style.transition = 'all .1s';
+    });
+
+    el.addEventListener('mouseenter', e => {
+      e.target.lastElementChild.style.transition = 'all .2s .2s';
+    });
   });
 }
+
+if (filterBtn)
+  filterBtn.addEventListener('click', () => {
+    contFilter.classList.toggle(domStrings.fShow);
+
+    // preparing
+    h2.classList.toggle('h2--pref--hide');
+    containerCard.classList.toggle('containerCards--down');
+  });
 
 const clear = (...arg) => {
   arg.forEach((el, i) => {
@@ -109,22 +150,31 @@ if (order) {
     if (e.target.matches(` ${elm}, ${elm}_text, ${elm}_icon`)) {
       const elmN = e.target.closest(elm);
       const indicator = Array.from(elmN.classList).slice(-1);
+      console.log(indicator);
 
       elmN.nextElementSibling.classList.toggle(domStrings.listShow);
+      elmN.classList.remove(domStrings.listCurTypo);
 
       if (indicator[0].endsWith('ge'))
         return elmN.classList.add(domStrings.listCurRe);
+
+      if (indicator[0].endsWith('se') || indicator[0].endsWith('list'))
+        elmN.classList.add(domStrings.listCurTypo);
 
       elmN.classList.remove(domStrings.listCurChange, domStrings.listCurRe);
       elmN.classList.add(domStrings.listCurChange);
     } else if (e.target.matches(domStrings.listP)) {
       listCur.classList.add(domStrings.listCurRe);
+      listCur.classList.remove(domStrings.listCurTypo);
+
       list.classList.remove(domStrings.listShow);
       listCurText.textContent = e.target.textContent;
     } else {
       if (listCur.matches(`.${domStrings.listCurChange}`)) {
         listCur.classList.add(domStrings.listCurRe);
+        listCur.classList.remove(domStrings.listCurTypo);
         list.classList.remove(domStrings.listShow);
+        // elmN.classList.remove(domStrings.listCurTypo);
       }
     }
   });

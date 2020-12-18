@@ -27,16 +27,31 @@
   &--sec {
     &:link,
     &:visited {
-      background-color: lighten($color-tertiary, 19%);
+      background-color: #c25987;
+      // background-color: #ea9ed3;
+      // background-color: #763e98;
+      // background-color: #d9973a;
+      // background-color: #77e840;
+      // background-color: #635335;
+      // background-color: #dd86ac;
+      // background-color: #c25987;
+      // background-color: #fff0ed;
+      // background-color: #ffe5c0;
+      // background-color: lighten(#caf8b4, 4%);
+      // background-color: #fadff2;
+      // background-color: darken(#eae5da, 4%);
+
+      // background-color: #ded6c4;
       text-transform: capitalize;
       text-align: center;
+      color: lighten(#ecb6ce, 11%);
 
       &:hover {
-        background-color: lighten($color-tertiary, 16%);
+        background-color: darken(#c25987, 2%);
       }
 
       &:active {
-        background-color: lighten($color-tertiary, 20%);
+        background-color: lighten(#c25987, 1%);
       }
     }
   }
