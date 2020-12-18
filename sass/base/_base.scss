@@ -30,14 +30,17 @@ body {
     1fr [s2-start] minmax(6rem, 12rem) [full-end s2-end];
 
   &--back {
-    grid-template-rows: 10vh 83vh 10vh;
-    background-image: linear-gradient(
-      to right bottom,
-      $color-primary-lighter,
-      $color-primary-lightest
-    );
-    background-size: cover;
-    background-repeat: no-repeat;
+    grid-template-columns: 2rem min-content 4.68rem 1fr;
+    // background-image: linear-gradient(to top right, #c9ffbf, #ffafbd);
+    // background-image: linear-gradient(to top left, #ffffee, #ddefbb);
+    // background-image: linear-gradient(to bottom right, #ffffee, #ddefbb);
+
+    // background-image: linear-gradient(
+    //   to right,
+    //   rgba(#cac531, 0.5),
+    //   rgba(#f3f9a7, 0.7)
+    // );
+    // background-color: rgba(#f2c94c, 0.4);
     overflow: hidden;
   }
 }

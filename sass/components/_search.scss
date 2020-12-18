@@ -1,9 +1,10 @@
 .search {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: max-content;
+  grid-auto-rows: min-content;
   align-items: center;
   position: relative;
+  justify-self: stretch;
 
   & > * {
     grid-row: 1 / 2;
@@ -13,15 +14,16 @@
   &__input {
     font-size: 1.4rem;
     font-family: $font-primary;
-    width: 100%;
-    background-color: $color-grey-light-1;
+    background-color: #ffffff;
     border: none;
-    border-radius: 8px;
-    padding: 0.6rem 5rem;
+
+    // box-shadow: 0 -0.3rem 2.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    padding: 0.8rem 5rem;
     padding-left: 5.5rem;
 
-    transform-origin: top;
-    transition: all 0.1s;
+    transform-origin: left;
+    transition: all 0.2s;
     color: darken($color-grey-dark-2, 12%);
 
     &::placeholder {
@@ -30,12 +32,12 @@
 
     &:focus {
       outline: none;
-      transform: scaleY(1.1);
+      transform: scaleX(1.032);
     }
   }
 
   &__input:focus + &__icon {
-    transform: translateY(0.2rem);
+    transform: translateX(1.5px);
   }
 
   &__input:focus ~ &__button {
@@ -50,44 +52,33 @@
     margin-left: 1.8rem;
     z-index: 30;
     position: relative;
-    transition: all 0.1s;
+    transition: all 0.2s;
   }
 
   &__button {
     justify-self: end;
-    align-self: bottom;
     border: none;
-    background-image: linear-gradient(
-      to right,
-      $color-primary-light,
-      $color-primary-dark
-    );
+    align-self: bottom;
+    background-color: #dd86ac;
+
     color: #fff;
     font-family: $display-font;
-    padding: 0.6rem 1rem;
+    padding: 0.85rem 1rem;
     cursor: pointer;
-    transition: all 0s;
     border-radius: 5px;
-    z-index: 30;
-    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 
-    transition: all 0.1s;
+    transition: opacity 0.15s 0.12s, background-color 0.2s;
     opacity: 0;
-    transform-origin: top;
-    transform: scaleY(1.1);
+    transform: translateX(1.8rem);
 
     &:focus,
     &:hover {
       outline: none;
-      background-image: linear-gradient(
-        to right,
-        $color-primary-lighter,
-        $color-primary-light
-      );
+      background-color: darken(#dd86ac, 3%);
     }
   }
 }

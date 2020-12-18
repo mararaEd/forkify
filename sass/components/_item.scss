@@ -1,32 +1,62 @@
 .item {
   display: grid;
-  grid-template-columns: 1.4fr 2fr 1fr;
+  grid-template-columns: 1.8fr 2fr 1fr;
   padding: 0.7rem 1rem;
   border-radius: 10px;
   column-gap: 1.3rem;
-  row-gap: 1.5rem;
+  row-gap: 2.4rem;
   align-items: center;
   transition: all 0.2s;
 
   &:hover {
-    background-color: lighten($color-grey-light-1, 2%);
+    background-color: #ea9ed3;
+    background-color: #763e98;
+    background-color: #d9973a;
+    background-color: #77e840;
+    background-color: #635335;
+    background-color: #dd86ac;
+    background-color: #c25987;
+    background-color: #fff0ed;
+    background-color: #ffe5c0;
+    background-color: lighten(#caf8b4, 4%);
+    background-color: #fadff2;
+    background-color: darken(#eae5da, 4%);
+
+    background-color: #ded6c4;
+    // background-color: lighten(#d0c2d8, 10%);
+
+    // background-color: lighten($color-grey-light-1, 2%);
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
   }
 
   &:hover &__container-quant {
     width: 5rem;
   }
+
+  &:hover &__name {
+    color: #635335;
+    color: #4d4029;
+    // color: #9c8d6c;
+  }
+
+  &:hover &__price {
+    color: #635335;
+    font-weight: 400;
+  }
+
+  &:hover &__icon {
+    fill: #9c8d6c;
+  }
   // hover
 
   &__img {
     grid-row: 1 / 3;
+    height: 100%;
     width: 100%;
-    height: 6.1rem;
     object-fit: cover;
     border-radius: 6px;
 
-    // full-screen-mode
-    height: 6.9rem;
+    // height: 6.9rem;
   }
 
   &__close {
@@ -43,17 +73,22 @@
     height: 100%;
     fill: $color-grey-dark-2;
     transform: translateX(0.6rem);
+    transition: all 0.2s;
   }
 
   &__form {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
   }
+  &__name,
+  &__price {
+    align-self: start;
+  }
 
   &__price {
+    transition: all 0.2s;
     grid-row: 1 / span 2;
     grid-column: 3 /4;
-    align-self: start;
     font-weight: 500;
     font-size: 1.2rem;
     font-family: $display-font;
@@ -69,6 +104,7 @@
     font-weight: 400;
     font-family: $display-font;
     color: $color-grey-dark-3;
+    transition: all 0.2s;
   }
 
   &__container-quant {

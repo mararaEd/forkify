@@ -45,52 +45,62 @@
       />
     </figure> -->
 
-    <main class="main">
-      <nav class="side-nav">
-        <ul class="side-nav__list">
-          <li class="side-nav__item">
-            <div class="side-nav__icon-box">
-              <svg class="side-nav__icon">
-                <use xlink:href="img/sprite.svg#icon-unread"></use>
-              </svg>
-            </div>
-          </li>
+    <nav class="side-nav">
+      <img src="img/fav.png" alt="logo" class="side-nav__logo" />
 
-          <li class="side-nav__item">
-            <div class="side-nav__icon-box">
-              <svg class="side-nav__icon">
-                <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
-              </svg>
-            </div>
-          </li>
+      <ul class="side-nav__list">
+        <li class="side-nav__item">
+          <div class="side-nav__icon-box side-nav__icon-box--1">
+            <svg class="side-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-unread"></use>
+            </svg>
+          </div>
+        </li>
 
-          <li class="side-nav__item side-nav__item--active">
-            <div class="side-nav__icon-box">
-              <svg class="side-nav__icon">
-                <use xlink:href="img/sprite.svg#icon-home"></use>
-              </svg>
-            </div>
-          </li>
+        <li class="side-nav__item">
+          <div class="side-nav__icon-box side-nav__icon-box--2">
+            <svg class="side-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-heart"></use>
+            </svg>
+          </div>
+        </li>
 
-          <li class="side-nav__item">
-            <div class="side-nav__icon-box">
-              <svg class="side-nav__icon">
-                <use xlink:href="img/sprite.svg#icon-map"></use>
-              </svg>
-            </div>
-          </li>
+        <li class="side-nav__item side-nav__item--active">
+          <div class="side-nav__icon-box side-nav__icon-box--3">
+            <svg class="side-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-home"></use>
+            </svg>
+          </div>
+        </li>
 
-          <li class="side-nav__item">
-            <div class="side-nav__icon-box">
-              <svg class="side-nav__icon">
-                <use xlink:href="img/sprite.svg#icon-credit-card"></use>
-              </svg>
-            </div>
-          </li>
-        </ul>
-      </nav>
+        <li class="side-nav__item">
+          <div class="side-nav__icon-box side-nav__icon-box--4">
+            <svg class="side-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-map"></use>
+            </svg>
+          </div>
+        </li>
 
-      <secton class="overview">
+        <li class="side-nav__item">
+          <div class="side-nav__icon-box side-nav__icon-box--5">
+            <svg class="side-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+        </li>
+
+        <li class="side-nav__item">
+          <div class="side-nav__icon-box side-nav__icon-box--6">
+            <svg class="side-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-shopping-cart1"></use>
+            </svg>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="overview">
+      <nav class="user-nav">
         <form class="search">
           <input
             type="search"
@@ -105,424 +115,881 @@
           <button class="search__button">Search</button>
         </form>
 
-        <div class="img-view">
-          <div class="text">
-            <span>40% off</span>
-            <span>4 days left at this price!</span>
-          </div>
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-equalizer"></use>
+          </svg>
         </div>
 
-        <div class="img-view__dec">
-          <span class="img-view__dec-span img-view__dec-span--1"></span>
-          <span class="img-view__dec-span img-view__dec-span--2"></span>
-          <span class="img-view__dec-span img-view__dec-span--3"></span>
-          <span class="img-view__dec-span img-view__dec-span--4"></span>
+        <div class="user-nav__icon-box user-nav__icon-box--not">
+          <svg class="user-nav__icon">
+            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+          </svg>
+
+          <span class="user-nav__ind">4</span>
         </div>
 
-        <nav class="search-pref">
-          <ul class="search-pref__list">
-            <li class="search-pref__item search-pref__item--active">
-              <a href="#" class="search-pref__link">
-                <svg class="search-pref__icon">
-                  <use xlink:href="img/sprite.svg#icon-bakery_dining"></use>
-                </svg>
-                Nearby
-              </a>
-            </li>
+        <div class="user-nav__icon-box user-nav__icon-box--not">
+          <svg class="user-nav__icon">
+            <use
+              data-order="false"
+              xlink:href="img/sprite.svg#icon-shopping-cart"
+            ></use>
+          </svg>
 
-            <li class="search-pref__item">
-              <a href="#" class="search-pref__link">
-                <svg class="search-pref__icon">
-                  <use xlink:href="img/sprite.svg#icon-briefcase"></use>
-                </svg>
-                Promotions
-              </a>
-            </li>
+          <span data-order="false" class="user-nav__ind">8</span>
+        </div>
 
-            <li class="search-pref__item">
-              <a href="#" class="search-pref__link">
-                <svg class="search-pref__icon">
-                  <use xlink:href="img/sprite.svg#icon-newspaper"></use>
-                </svg>
-                Newcomers
-              </a>
-            </li>
+        <div class="user-nav__user">
+          <img
+            src="img/user-3.jpg"
+            alt="user photo"
+            class="user-nav__user-img"
+          />
+          <span class="user-nav__user-name"
+            >Jonas
+            <svg class="user-nav__dropdown">
+              <use xlink:href="img/sprite.svg#icon-chevron-small-down"></use>
+            </svg>
+          </span>
 
-            <li class="search-pref__item">
-              <a href="#" class="search-pref__link">
-                <svg class="search-pref__icon">
-                  <use xlink:href="img/sprite.svg#icon-shop"></use>
-                </svg>
-                Best sellers
-              </a>
+          <ul class="user-nav__user-list">
+            <li class="user-nav__user-item">
+              <a href="#" class="user-nav__user-link user-nav__user-link--1"
+                >settings</a
+              >
             </li>
-
-            <li class="search-pref__item">
-              <a href="#" class="search-pref__link">
-                <svg class="search-pref__icon">
-                  <use xlink:href="img/sprite.svg#icon-star-outlined"></use>
-                </svg>
-                Top rated
-              </a>
-            </li>
-
-            <li class="search-pref__item">
-              <a href="#" class="search-pref__link">
-                <svg class="search-pref__icon">
-                  <use xlink:href="img/sprite.svg#icon-grid"></use>
-                </svg>
-                All
-              </a>
+            <li class="user-nav__user-item">
+              <a href="#" class="user-nav__user-link user-nav__user-link--2"
+                >logout</a
+              >
             </li>
           </ul>
-        </nav>
-
-        <div class="container__cards">
-          <div class="card">
-            <figure class="card__fig">
-              <img src="img/card-1.jpg" alt="burger" class="card__img" />
-              <figcaption class="card__caption">
-                <a href="#" class="card__caption-button">Order now</a>
-              </figcaption>
-              <span class="card__icon-box">
-                <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart"></use>
-                </svg>
-              </span>
-            </figure>
-
-            <div class="card__name">Burgerito Mojito</div>
-            <span class="card__price"
-              ><span class="card__price-currency">$</span>
-              <span class="card__price-number">30</span>
-            </span>
-            <p class="card__desc">white rum, sparkling water</p>
-
-            <a href="#" class="card__button"> </a>
-          </div>
-
-          <div class="card">
-            <figure class="card__fig">
-              <img src="img/card-2.jpg" alt="pizza" class="card__img" />
-
-              <figcaption class="card__caption">
-                <a href="#" class="card__caption-button">Order now</a>
-              </figcaption>
-              <span class="card__icon-box">
-                <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart"></use>
-                </svg>
-              </span>
-            </figure>
-            <div class="card__name">Tomato pizza</div>
-            <span class="card__price"
-              ><span class="card__price-currency">$</span>
-              <span class="card__price-number">30</span>
-            </span>
-            <p class="card__desc">white rum, sparkling water</p>
-
-            <a href="#" class="card__button"> </a>
-          </div>
-
-          <div class="card">
-            <figure class="card__fig">
-              <img src="img/card-3.jpg" alt="salad" class="card__img" />
-
-              <figcaption class="card__caption">
-                <a href="#" class="card__caption-button">Order now</a>
-              </figcaption>
-
-              <span class="card__icon-box">
-                <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
-                </svg>
-              </span>
-            </figure>
-            <div class="card__name">Fresh salad</div>
-            <span class="card__price"
-              ><span class="card__price-currency">$</span>
-              <span class="card__price-number">30</span>
-            </span>
-            <p class="card__desc">white rum, sparkling water</p>
-
-            <a href="#" class="card__button"> </a>
-          </div>
-
-          <div class="card">
-            <figure class="card__fig">
-              <img src="img/card-4.jpg" alt="burger" class="card__img" />
-
-              <figcaption class="card__caption">
-                <a href="#" class="card__caption-button">Order now</a>
-              </figcaption>
-              <span class="card__icon-box">
-                <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
-                </svg>
-              </span>
-            </figure>
-            <div class="card__name">Salad duff</div>
-            <span class="card__price"
-              ><span class="card__price-currency">$</span>
-              <span class="card__price-number">30</span>
-            </span>
-            <p class="card__desc">white rum, sparkling water</p>
-            <a href="#" class="card__button"> </a>
-          </div>
-
-          <div class="card">
-            <figure class="card__fig">
-              <img src="img/test-3.jpg" alt="burger" class="card__img" />
-
-              <figcaption class="card__caption">
-                <a href="#" class="card__caption-button">Order now</a>
-              </figcaption>
-              <span class="card__icon-box">
-                <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
-                </svg>
-              </span>
-            </figure>
-            <div class="card__name">Fresh meal</div>
-            <span class="card__price"
-              ><span class="card__price-currency">$</span>
-              <span class="card__price-number">30</span>
-            </span>
-            <p class="card__desc">white rum, sparkling water</p>
-            <a href="#" class="card__button"> </a>
-          </div>
-
-          <div class="card">
-            <figure class="card__fig">
-              <img src="img/img-3.jpg" alt="burger" class="card__img" />
-
-              <figcaption class="card__caption">
-                <a href="#" class="card__caption-button">Order now</a>
-              </figcaption>
-              <span class="card__icon-box">
-                <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
-                </svg>
-              </span>
-            </figure>
-            <div class="card__name">Pizza Dough</div>
-            <span class="card__price"
-              ><span class="card__price-currency">$</span>
-              <span class="card__price-number">30</span>
-            </span>
-            <p class="card__desc">white rum, sparkling water</p>
-            <a href="#" class="card__button"> </a>
-          </div>
-
-          <div class="card">
-            <figure class="card__fig">
-              <img src="img/img-3.jpg" alt="burger" class="card__img" />
-
-              <figcaption class="card__caption">
-                <a href="#" class="card__caption-button">Order now</a>
-              </figcaption>
-              <span class="card__icon-box">
-                <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
-                </svg>
-              </span>
-            </figure>
-            <div class="card__name">Pizza Dough</div>
-            <span class="card__price"
-              ><span class="card__price-currency">$</span>
-              <span class="card__price-number">30</span>
-            </span>
-            <p class="card__desc">white rum, sparkling water</p>
-            <a href="#" class="card__button"> </a>
-          </div>
-
-          <div class="card">
-            <figure class="card__fig">
-              <img src="img/card-4.jpg" alt="burger" class="card__img" />
-
-              <figcaption class="card__caption">
-                <a href="#" class="card__caption-button">Order now</a>
-              </figcaption>
-              <span class="card__icon-box">
-                <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
-                </svg>
-              </span>
-            </figure>
-            <div class="card__name">Salad duff</div>
-            <span class="card__price"
-              ><span class="card__price-currency">$</span>
-              <span class="card__price-number">30</span>
-            </span>
-            <p class="card__desc">white rum, sparkling water</p>
-            <a href="#" class="card__button"> </a>
-          </div>
-
-          <div class="card">
-            <figure class="card__fig">
-              <img src="img/card-4.jpg" alt="burger" class="card__img" />
-
-              <figcaption class="card__caption">
-                <a href="#" class="card__caption-button">Order now</a>
-              </figcaption>
-              <span class="card__icon-box">
-                <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
-                </svg>
-              </span>
-            </figure>
-            <div class="card__name">Salad duff</div>
-            <span class="card__price"
-              ><span class="card__price-currency">$</span>
-              <span class="card__price-number">30</span>
-            </span>
-            <p class="card__desc">white rum, sparkling water</p>
-            <a href="#" class="card__button"> </a>
-          </div>
         </div>
-      </secton>
+      </nav>
 
-      <section class="order">
-        <h2 class="h2 order__heading">My orders</h2>
+      <h2 class="h2 h2--pref">Newcomers</h2>
+      <div class="containerCards">
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-2.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <p class="card__caption-desc">
+                You won't stop looking at it, will you
+              </p>
+            </figcaption>
 
-        <div class="order__form">
-          <form class="form">
-            <div class="form__group">
-              <div class="radio__group">
-                <label
-                  for="unique_add"
-                  class="form__label form__label--grey form__label--order"
-                >
-                  <p class="margin-bottom">Delivery address</p>
-
-                  <div class="form__cur-list">
-                    <p class="form__cur-list_text">1341 Morris street</p>
-                    <svg class="form__cur-list_icon">
-                      <use
-                        xlink:href="img/sprite.svg#icon-chevron-small-down"
-                      ></use>
-                    </svg>
-                  </div>
-
-                  <div class="form__list">
-                    <p class="form__list-p">lorem ipsum dolor sit amet</p>
-                    <p class="form__list-p">Proin vitae ante</p>
-                    <p class="form__list-p">porta enim in</p>
-                    <p class="form__list-p">lorem ipsum dolor sit amet</p>
-                  </div>
-                </label>
+            <span class="card__icon">
+              <div class="card__icon-ibox">
+                <svg class="card__icon-ico">
+                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+                </svg>
               </div>
-            </div>
-          </form>
+              <p class="card__icon-t">Favorites</p>
+
+              <!-- <span class="card__icon-t">Favorites</span> -->
+            </span>
+          </figure>
+          <div class="card__name">Best pizza dough ever</div>
+          <div class="card__rating">
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+
+          <p class="card__price">$30</p>
+          <a href="#" class="card__button"></a>
+          <!-- <div class="card__name">Salad duff</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+          <a href="#" class="card__button"> </a>
+        </div> -->
         </div>
 
-        <div class="order__details">
-          <svg class="order__details-icon">
-            <use xlink:href="img/sprite.svg#icon-stopwatch"></use>
-          </svg>
-          <p class="order__details-text order__details-text--1">43 mins</p>
-          <svg class="order__details-icon">
-            <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-          </svg>
-          <p class="order__details-text">4kms</p>
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-1.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <p class="card__caption-desc">
+                You won't stop looking at it, will you
+              </p>
+            </figcaption>
+
+            <span class="card__icon">
+              <div class="card__icon-ibox">
+                <svg class="card__icon-ico card__icon-ico--1">
+                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+                </svg>
+              </div>
+              <p class="card__icon-t">Favorites</p>
+
+              <!-- <span class="card__icon-t">Favorites</span> -->
+            </span>
+          </figure>
+          <div class="card__name">Best pizza dough ever</div>
+          <div class="card__rating">
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+          <p class="card__price">$30</p>
+          <a href="#" class="card__button"></a>
+          <!-- <div class="card__name">Salad duff</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+          <a href="#" class="card__button"> </a>
+        </div> -->
         </div>
 
-        <div class="order__container-items">
-          <div class="item">
-            <img src="img/card-1.jpg" alt="item 1" class="item__img" />
-            <h3 class="item__name">Burger mozzo xl Extra cheese</h3>
-            <span class="item__close">
-              <svg class="item__icon">
-                <use xlink:href="img/sprite.svg#icon-close"></use>
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/img-3.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <p class="card__caption-desc">
+                You won't stop looking at it, will you
+              </p>
+            </figcaption>
+
+            <span class="card__icon">
+              <div class="card__icon-ibox">
+                <svg class="card__icon-ico card__icon-ico--1">
+                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+                </svg>
+              </div>
+              <p class="card__icon-t">Favorites</p>
+
+              <!-- <span class="card__icon-t">Favorites</span> -->
+            </span>
+          </figure>
+          <div class="card__name">Best pizza dough ever</div>
+          <div class="card__rating">
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+
+          <p class="card__price">$30</p>
+          <a href="#" class="card__button"></a>
+          <!-- <div class="card__name">Salad duff</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+          <a href="#" class="card__button"> </a>
+        </div> -->
+        </div>
+
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-2.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <p class="card__caption-desc">
+                You won't stop looking at it, will you
+              </p>
+            </figcaption>
+
+            <span class="card__icon">
+              <div class="card__icon-ibox">
+                <svg class="card__icon-ico card__icon-ico--1">
+                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+                </svg>
+              </div>
+              <p class="card__icon-t">Favorites</p>
+
+              <!-- <span class="card__icon-t">Favorites</span> -->
+            </span>
+          </figure>
+          <div class="card__name">Best pizza dough ever</div>
+          <div class="card__rating">
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+          <p class="card__price">$30</p>
+          <a href="#" class="card__button"></a>
+          <!-- <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+        </div> -->
+        </div>
+
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-1.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <p class="card__caption-desc">
+                You won't stop looking at it, will you
+              </p>
+            </figcaption>
+
+            <span class="card__icon">
+              <div class="card__icon-ibox">
+                <svg class="card__icon-ico card__icon-ico--1">
+                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+                </svg>
+              </div>
+              <p class="card__icon-t">Favorites</p>
+
+              <!-- <span class="card__icon-t">Favorites</span> -->
+            </span>
+          </figure>
+          <div class="card__name">Best pizza dough ever</div>
+          <div class="card__rating">
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+          <p class="card__price">$30</p>
+          <a href="#" class="card__button"></a>
+          <!-- <div class="card__name">Salad duff</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+          <a href="#" class="card__button"> </a>
+        </div> -->
+        </div>
+
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/img-3.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <p class="card__caption-desc">
+                You won't stop looking at it, will you
+              </p>
+            </figcaption>
+
+            <span class="card__icon">
+              <div class="card__icon-ibox">
+                <svg class="card__icon-ico card__icon-ico--1">
+                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+                </svg>
+              </div>
+              <p class="card__icon-t">Favorites</p>
+
+              <!-- <span class="card__icon-t">Favorites</span> -->
+            </span>
+          </figure>
+          <div class="card__name">Best pizza dough ever</div>
+          <div class="card__rating">
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+
+          <p class="card__price">$30</p>
+          <a href="#" class="card__button"></a>
+          <!-- <div class="card__name">Salad duff</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+          <a href="#" class="card__button"> </a>
+        </div> -->
+        </div>
+
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-2.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <p class="card__caption-desc">
+                You won't stop looking at it, will you
+              </p>
+            </figcaption>
+
+            <span class="card__icon">
+              <div class="card__icon-ibox">
+                <svg class="card__icon-ico card__icon-ico--1">
+                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+                </svg>
+              </div>
+              <p class="card__icon-t">Favorites</p>
+
+              <!-- <span class="card__icon-t">Favorites</span> -->
+            </span>
+          </figure>
+          <div class="card__name">Best pizza dough ever</div>
+          <div class="card__rating">
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+          <p class="card__price">$30</p>
+          <a href="#" class="card__button"></a>
+          <!-- <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+        </div> -->
+        </div>
+
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-1.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <p class="card__caption-desc">
+                You won't stop looking at it, will you
+              </p>
+            </figcaption>
+
+            <span class="card__icon">
+              <div class="card__icon-ibox">
+                <svg class="card__icon-ico card__icon-ico--1">
+                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+                </svg>
+              </div>
+              <p class="card__icon-t">Favorites</p>
+
+              <!-- <span class="card__icon-t">Favorites</span> -->
+            </span>
+          </figure>
+          <div class="card__name">Best pizza dough ever</div>
+          <div class="card__rating">
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+          <p class="card__price">$30</p>
+          <a href="#" class="card__button"></a>
+          <!-- <div class="card__name">Salad duff</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+          <a href="#" class="card__button"> </a>
+        </div> -->
+        </div>
+
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/img-3.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <p class="card__caption-desc">
+                You won't stop looking at it, will you
+              </p>
+            </figcaption>
+
+            <span class="card__icon">
+              <div class="card__icon-ibox">
+                <svg class="card__icon-ico card__icon-ico--1">
+                  <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+                </svg>
+              </div>
+              <p class="card__icon-t">Favorites</p>
+
+              <!-- <span class="card__icon-t">Favorites</span> -->
+            </span>
+          </figure>
+          <div class="card__name">Best pizza dough ever</div>
+          <div class="card__rating">
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+            <svg class="card__rating-icon">
+              <use xlink:href="img/sprite.svg#icon-star"></use>
+            </svg>
+          </div>
+
+          <p class="card__price">$30</p>
+          <a href="#" class="card__button"></a>
+          <!-- <div class="card__name">Salad duff</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+          <a href="#" class="card__button"> </a>
+        </div> -->
+        </div>
+      </div>
+
+      <nav class="search-pref">
+        <ul class="search-pref__list">
+          <li class="search-pref__item search-pref__item--active">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-bakery_dining"></use>
+              </svg>
+              Nearby
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-briefcase"></use>
+              </svg>
+              Promotions
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-newspaper"></use>
+              </svg>
+              Newcomers
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-shop"></use>
+              </svg>
+              Best sellers
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-star-outlined"></use>
+              </svg>
+              Top rated
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-grid"></use>
+              </svg>
+              All items
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- <div class="img-view">
+        <div class="text">
+          <span>40% off</span>
+          <span>4 days left at this price!</span>
+        </div>
+      </div> -->
+
+      <!-- <div class="img-view__dec">
+        <span class="img-view__dec-span img-view__dec-span--1"></span>
+        <span class="img-view__dec-span img-view__dec-span--2"></span>
+        <span class="img-view__dec-span img-view__dec-span--3"></span>
+        <span class="img-view__dec-span img-view__dec-span--4"></span>
+      </div>
+
+      <nav class="search-pref">
+        <ul class="search-pref__list">
+          <li class="search-pref__item search-pref__item--active">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-bakery_dining"></use>
+              </svg>
+              Nearby
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-briefcase"></use>
+              </svg>
+              Promotions
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-newspaper"></use>
+              </svg>
+              Newcomers
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-shop"></use>
+              </svg>
+              Best sellers
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-star-outlined"></use>
+              </svg>
+              Top rated
+            </a>
+          </li>
+
+          <li class="search-pref__item">
+            <a href="#" class="search-pref__link">
+              <svg class="search-pref__icon">
+                <use xlink:href="img/sprite.svg#icon-grid"></use>
+              </svg>
+              All
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container__cards">
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-1.jpg" alt="burger" class="card__img" />
+            <figcaption class="card__caption">
+              <a href="#" class="card__caption-button">Order now</a>
+            </figcaption>
+            <span class="card__icon-box">
+              <svg class="card__icon">
+                <use xlink:href="img/sprite.svg#icon-heart"></use>
               </svg>
             </span>
+          </figure>
 
-            <div class="item__container-quant">
-              <div class="quantifier">
-                <span class="quantifier__content">1</span>
-                <span class="quantifier__icon-box">
-                  <svg class="quantifier__icon">
-                    <use
-                      xlink:href="img/sprite.svg#icon-chevron-small-down"
-                    ></use>
-                  </svg>
-                </span>
-              </div>
+          <div class="card__name">Burgerito Mojito</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
 
-              <form action="#" class="form form--quant">
-                <div class="form__group">
-                  <input
-                    type="number"
-                    class="form__input form__input--num"
-                    value="1"
-                  />
-                </div>
-              </form>
-            </div>
+          <a href="#" class="card__button"> </a>
+        </div>
 
-            <span class="item__price">$39</span>
-          </div>
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-2.jpg" alt="pizza" class="card__img" />
 
-          <div class="item">
-            <img src="img/card-2.jpg" alt="item 2" class="item__img" />
-            <h3 class="item__name">lorem ipsum dolor sit</h3>
-            <span class="item__close">
-              <svg class="item__icon">
-                <use xlink:href="img/sprite.svg#icon-close"></use>
+            <figcaption class="card__caption">
+              <a href="#" class="card__caption-button">Order now</a>
+            </figcaption>
+            <span class="card__icon-box">
+              <svg class="card__icon">
+                <use xlink:href="img/sprite.svg#icon-heart"></use>
               </svg>
             </span>
+          </figure>
+          <div class="card__name">Tomato pizza</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
 
-            <div class="item__container-quant">
-              <div class="quantifier">
-                <span class="quantifier__content">1</span>
-                <span class="quantifier__icon-box">
-                  <svg class="quantifier__icon">
-                    <use
-                      xlink:href="img/sprite.svg#icon-chevron-small-down"
-                    ></use>
-                  </svg>
-                </span>
-              </div>
-
-              <form action="#" class="form form--quant">
-                <div class="form__group">
-                  <input
-                    type="number"
-                    class="form__input form__input--num"
-                    value="1"
-                  />
-                </div>
-              </form>
-            </div>
-
-            <span class="item__price">$35</span>
-          </div>
+          <a href="#" class="card__button"> </a>
         </div>
 
-        <div class="cta">
-          <div class="cta__stat">
-            <p class="cta__stat-label">Sub total</p>
-            <p class="cta__stat-value">$100</p>
-            <p class="cta__stat-label">Delivery fee</p>
-            <p class="cta__stat-value">$5</p>
-          </div>
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-4.jpg" alt="burger" class="card__img" />
 
-          <div class="cta__promo">
-            <p class="cta__promo-p">Find promotion</p>
-            <a href="#" class="btn btn--sec btn--small cta__promo-btn"
-              >Add Coupon</a
-            >
-          </div>
-
-          <div class="cta__stat cta__stat--end">
-            <p class="cta__stat-label">total</p>
-            <p class="cta__stat-value">$105</p>
-          </div>
-
-          <a href="#" class="btn btn--order btn--sec">Check out</a>
+            <figcaption class="card__caption">
+              <a href="#" class="card__caption-button">Order now</a>
+            </figcaption>
+            <span class="card__icon-box">
+              <svg class="card__icon">
+                <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+              </svg>
+            </span>
+          </figure>
+          <div class="card__name">Salad duff</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+          <a href="#" class="card__button"> </a>
         </div>
-      </section>
+
+        <div class="card">
+          <figure class="card__fig">
+            <img src="img/card-4.jpg" alt="burger" class="card__img" />
+
+            <figcaption class="card__caption">
+              <a href="#" class="card__caption-button">Order now</a>
+            </figcaption>
+            <span class="card__icon-box">
+              <svg class="card__icon">
+                <use xlink:href="img/sprite.svg#icon-heart-outlined"></use>
+              </svg>
+            </span>
+          </figure>
+          <div class="card__name">Salad duff</div>
+          <span class="card__price"
+            ><span class="card__price-currency">$</span>
+            <span class="card__price-number">30</span>
+          </span>
+          <p class="card__desc">white rum, sparkling water</p>
+          <a href="#" class="card__button"> </a>
+        </div>
+      </div> -->
     </main>
+
+    <section class="order">
+      <span class="order__close">
+        <svg class="order__icon">
+          <use data-order="true" xlink:href="img/sprite.svg#icon-close"></use>
+        </svg>
+      </span>
+
+      <h2 class="h2 order__heading">My orders</h2>
+
+      <div class="order__form">
+        <form class="form">
+          <div class="form__group">
+            <div class="radio__group">
+              <label
+                for="unique_add"
+                class="form__label form__label--grey form__label--order"
+              >
+                <p class="margin-bottom order__p">Delivery address</p>
+
+                <div class="form__cur-list">
+                  <p class="form__cur-list_text">1341 Morris street</p>
+                  <svg class="form__cur-list_icon">
+                    <use
+                      xlink:href="img/sprite.svg#icon-chevron-small-down"
+                    ></use>
+                  </svg>
+                </div>
+
+                <div class="form__list">
+                  <p class="form__list-p">lorem ipsum dolor sit amet</p>
+                  <p class="form__list-p">Proin vitae ante</p>
+                  <p class="form__list-p">porta enim in</p>
+                  <p class="form__list-p">lorem ipsum dolor sit amet</p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="order__details">
+        <svg class="order__details-icon">
+          <use xlink:href="img/sprite.svg#icon-stopwatch"></use>
+        </svg>
+        <p class="order__details-text order__details-text--1">43 mins</p>
+        <svg class="order__details-icon">
+          <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+        </svg>
+        <p class="order__details-text">4kms</p>
+      </div>
+
+      <div class="order__container-items">
+        <div class="item">
+          <img src="img/card-2.jpg" alt="item 2" class="item__img" />
+          <h3 class="item__name">lorem ipsum dolor sit</h3>
+          <span class="item__close">
+            <svg class="item__icon">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </span>
+
+          <div class="item__container-quant">
+            <div class="quantifier">
+              <span class="quantifier__content">1</span>
+              <span class="quantifier__icon-box">
+                <svg class="quantifier__icon">
+                  <use
+                    xlink:href="img/sprite.svg#icon-chevron-small-down"
+                  ></use>
+                </svg>
+              </span>
+            </div>
+
+            <form action="#" class="form form--quant">
+              <div class="form__group">
+                <input
+                  type="number"
+                  class="form__input form__input--num"
+                  value="1"
+                />
+              </div>
+            </form>
+          </div>
+
+          <span class="item__price">$35</span>
+        </div>
+
+        <div class="item">
+          <img src="img/img-3.jpg" alt="item 2" class="item__img" />
+          <h3 class="item__name">lorem ipsum dolor sit</h3>
+          <span class="item__close">
+            <svg class="item__icon">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </span>
+
+          <div class="item__container-quant">
+            <div class="quantifier">
+              <span class="quantifier__content">1</span>
+              <span class="quantifier__icon-box">
+                <svg class="quantifier__icon">
+                  <use
+                    xlink:href="img/sprite.svg#icon-chevron-small-down"
+                  ></use>
+                </svg>
+              </span>
+            </div>
+
+            <form action="#" class="form form--quant">
+              <div class="form__group">
+                <input
+                  type="number"
+                  class="form__input form__input--num"
+                  value="1"
+                />
+              </div>
+            </form>
+          </div>
+
+          <span class="item__price">$35</span>
+        </div>
+      </div>
+
+      <div class="cta">
+        <div class="cta__stat">
+          <p class="cta__stat-label">Sub total</p>
+          <p class="cta__stat-value">$100</p>
+          <p class="cta__stat-label">Delivery fee</p>
+          <p class="cta__stat-value">$5</p>
+        </div>
+
+        <div class="cta__promo">
+          <p class="cta__promo-p">Find promotion</p>
+          <a href="#" class="btn btn--sec btn--small cta__promo-btn"
+            >Add Coupon</a
+          >
+        </div>
+
+        <div class="cta__stat cta__stat--end">
+          <p class="cta__stat-label">total</p>
+          <p class="cta__stat-value">$105</p>
+        </div>
+
+        <a href="#" class="btn btn--order btn--sec">Check out</a>
+      </div>
+    </section>
 
     <script src="js/index.js"></script>
   </body>
