@@ -1,3 +1,3 @@
-# forkify
+# Forkify
 
-A typical restaurant page for our app
+A Front-end Restaurant Web App
